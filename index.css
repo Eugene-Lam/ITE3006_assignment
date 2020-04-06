@@ -3,7 +3,6 @@
     margin: 0;
 }
 .navbar {
-    position: fixed;
     list-style-type: none;
     display: block;
     height: auto;
@@ -20,7 +19,7 @@ li a, .dropbtn {
     display: inline-block;
     color: gold;
     text-align: center;
-    padding: 20px;
+    padding: 20px 30px;
     text-decoration: none;
 }
 li a:hover, .dropdown:hover .dropbtn {
@@ -33,15 +32,15 @@ li.dropdown {
     display: none;
     position: absolute;
     background-color: darkred;
-    min-width: auto;
-    z-index: auto;s
+    min-width: 140px;
+    z-index: 1;
 }
 .dropdown-content a {
     color: gold;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: left;
 }
 .dropdown-content a:hover {
     background-color: indianred;
