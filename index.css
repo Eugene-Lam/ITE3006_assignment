@@ -34,7 +34,7 @@ li.dropdown {
     position: absolute;
     background-color: darkred;
     min-width: auto;
-    z-index: auto;
+    z-index: auto;s
 }
 .dropdown-content a {
     color: gold;
