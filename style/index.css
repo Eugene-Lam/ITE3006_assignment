@@ -10,7 +10,10 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: red;
+    background-color: black;
+    opacity: 80%;
+    position: fixed;
+    z-index: 100;
 }
 li {
     float: left;
@@ -30,7 +33,7 @@ li.dropdown {
 }
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: darkred;
     min-width: 140px;
     z-index: 1;
@@ -48,4 +51,88 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex; 
+    flex-flow: row wrap; 
+    position: relative;
+    padding: 5%;
+    height: auto;
+    top: 500px;
+    background-color: aliceblue;
+    width: 100%;
+}
 
+.content1, .content2, .content3, .content4 {
+  border: 3px solid lime;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.header {
+	position: relative;
+	text-align: center;
+	color:darkgreen ;
+    font-size: 25px;
+	top: 250px;
+    font-family: monospace;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 70px white, 0 0 60px white;
+	}
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px lime, 0 0 50px lime, 0 0 60px lime,0 0 70px lime, 0 0 80px lime;
+	}
+}
+.content1 {
+    order: 1;
+    width: 400px;
+    flex-grow: 1; 
+    
+}
+.content2 {
+    order: 2;
+    width: 400px;
+    flex-grow: 1; 
+}
+.content3 {
+    order: 3;
+    width: 100%;
+    flex-grow: 1; 
+}
+.content4 {
+    order: 4;
+    width: 400px;
+    flex-grow: 1; 
+}
+.button {
+	background-color:#399444;
+    border-radius: 20px;
+    text-indent:0;
+	display:inline-block;
+	color: #ffffff;
+	font-family: monospace;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 50px;
+    width: 140px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 2px 2px 0px #2f6627;
+}
+.button:hover {
+	background-color: #5cbf2a;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.center {
+    text-align: center;
+}
