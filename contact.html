@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    body {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-image: url(img/bg2.png);
+}
+    </style>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/index.js"></script>
+    <title>Welcome to Cities Skylines</title>
+</head>
+    <body>
+<div class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="transport.html">Transportation</a></li>
+    <li class="dropdown">
+        <a class="dropbtn">Industry</a>
+        <div class="dropdown-content">
+            <a href="Industry/oil.html">Oil</a>
+            <a href="Industry/farm.html">Farm</a>
+        </div>
+    </li>
+    <li><a href="contact.html">Contact us</a></li>
+</div>
+
+    <div class="header">
+        <h1>
+            Contact Us
+        </h1>
+        </div>
+        <div class="flex-container">
+            <div class="content4">
+                  <form name="f1" onSubmit="print_result()">
+                      <table>
+                          <tr>
+                          <td>Name : </td>
+                          <td><input type="text" name="name" required="required"></td>
+                          </tr>
+                          <tr>
+                          <td>Age : </td>
+                          <td><input type="number" name="age" required="required" min="0" max="120"></td>
+                          </tr>
+                          <tr>
+                          <td>E-mail : </td>
+                          <td><input type="email" name="mail" required="required"></td>
+                          </tr>
+                          <tr>
+                          <td>Comments : </td>
+                          <td><input type="text" name="comments" required="required"></td>
+                          </tr>
+                      </table>  
+                      <input type="submit" value="Submit"/>        
+                </form>
+            
+            </div>
+        
+        </div>
+        
+        
+    </body>
+</html>

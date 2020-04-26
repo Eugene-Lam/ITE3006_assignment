@@ -2,6 +2,22 @@
     box-sizing: border-box;
     margin: 0;
 }
+@font-face {
+  font-family: headerfont;
+  src: url("/font/FROSTBITE-Wide.ttf");
+}
+@font-face {
+  font-family: cubic;
+  src: url("/font/cubic.ttf");
+}
+@font-face {
+  font-family: LettersforLearners;
+  src: url("/font/LettersforLearners.ttf");
+}
+@font-face {
+  font-family: Minecaft;
+  src: url("/font/Minecraft.ttf");
+}
 .navbar {
     list-style-type: none;
     display: block;
@@ -14,6 +30,7 @@
     opacity: 80%;
     position: fixed;
     z-index: 100;
+    font-family: Minecaft;
 }
 li {
     float: left;
@@ -77,10 +94,13 @@ li.dropdown {
 	color:darkgreen ;
     font-size: 25px;
 	top: 250px;
-    font-family: monospace;
+    font-family: headerfont;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
 	-moz-animation: glow 1s ease-in-out infinite alternate;
 	animation: glow 1s ease-in-out infinite alternate;
+}
+.content1, .content2, .content3, .content4 h1 {
+    font-family: cubic;
 }
 @-webkit-keyframes glow {
 	from {
@@ -108,8 +128,11 @@ li.dropdown {
 }
 .content4 {
     order: 4;
-    width: 400px;
+    width: 100%;
     flex-grow: 1; 
+    position: relative;	
+	display: grid;
+	grid-template-columns: auto;
 }
 .button {
 	background-color:#399444;
@@ -135,4 +158,56 @@ li.dropdown {
 }
 .center {
     text-align: center;
+}
+.page {
+	display: grid;
+}
+#nextpgBtn {
+    border-radius: 50%;
+    background-color: darkturquoise;
+    color: black;
+    justify-self: self-end;
+    float: right;
+    }
+#lastpgBtn {
+    border-radius: 50%;
+    background-color: darkblue;
+    color: aliceblue;
+    justify-self: self-start;
+    float: left;
+}
+btn {
+    display: inline-block;
+    height: 40px;
+	width: 40px;    
+}
+#nextpgBtn:hover{
+    background-color: darkblue;
+    color: aliceblue;
+}
+#lastpgBtn:hover{
+    background-color: darkturquoise;
+    color: black;
+}
+btn a {
+    font-size: 30px;
+    text-decoration: none;
+    padding: 15px;
+}
+.left {
+    float: left;
+    margin-right : 15px; 
+}
+.right {
+    float: right;
+    margin-left : 15px;
+}
+p {
+  display: block;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 20px;
+  font-family: LettersforLearners;
 }

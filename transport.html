@@ -5,7 +5,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-    background-image: url(img/bg1.png)
+    background-image: url(img/bg2.png);
 }
     </style>
     <head>
@@ -13,22 +13,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="js/index.js"></script>
     <link rel="stylesheet" href="style/index.css">
-    <script src="./js/index.js">
-</script>
+    <script src="js/index.js"></script>
     <title>Welcome to Cities Skylines</title>
 </head>
     <body>
 <div class="navbar">
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="#transportation">Transportation</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="transport.html">Transportation</a></li>
     <li class="dropdown">
         <a class="dropbtn">Industry</a>
         <div class="dropdown-content">
-            <a href="#">Oil</a>
-            <a href="#">Farm</a>
+            <a href="Industry/oil.html">Oil</a>
+            <a href="Industry/farm.html">Farm</a>
         </div>
     </li>
-    <li><a href="#contact">Contact us</a></li>
+    <li><a href="contact.html">Contact us</a></li>
 </div>
 
     <div class="header">
@@ -37,8 +36,93 @@
         </h1>
     </div>
     <div class="flex-container">
-        <div class="content3">
-            
-            
+        <div class="content4">
+            <div class="page">         
+                <h1>Transportation</h1>
+                <br>
+                <p>Transportation is one of the services in Cities: Skylines. There are many modes of transportation which are unlocked through milestones; you can set up a bus network, dig metro tunnels, lay down tracks for passenger and cargo trains, build both passenger and cargo terminals for ships and build an airport. Bus and metro networks are for inner city transport while train network can service both inner-city and intercity needs (both passenger and cargo trains). The harbors and the airport service intercity connections.</p>
+                <li>Bus</li>
+                <br><br>
+                <li>Metro</li>
+                <br><br>
+                <li>Train</li>
+                <br><br>
+                <li>Mono Rail</li>
+                <br><br>
+                <li>Airports</li>
+                <br><br>
+                <btn id="nextpgBtn" onclick="change(+1)"><a>&#8250;</a></btn>
+            </div>
+            <div class="page">
+                <h1>Bus</h1>
+                <br>
+                <div class="left">
+                <img alt="Bus Depot.png" src="img/75px-Bus_Depot.png" width="75" height="69">
+                </div>
+                <p>Buses are the first mode of public transportation available to the player in Cities: Skylines, and the cheapest. Similarly to trains, buses can be used for both local and intercity connections. Before one can set up local bus routes a bus depot needs to be constructed. This is quite expensive (₡30,000 standard, ₡40,000 for biofuel); however, a single bus depot can spawn 125,000 buses, so a single depot is sufficient for smaller cities. Larger cities may require more depots to avoid temporary localized congestion of empty buses en route to their first stops.</p>
+                <p>Also, an in-game day is not long enough to let buses reach their destination from only one bus depot. This can be remedied by building additional bus depots or using Steam Workshop modifications.</p><br>
+                <div class="right">
+                <img alt="Bus Stop.png" src="img/40px-Bus_Stop.png" width="40" height="37" ></div>
+                <p>To create bus lines, place bus stops along roads anywhere in the city. Continue to place bus stops for the desired route and then end the line at the first bus stop built. The line will then automatically start once closed. Loop lines and bi-directional lines can be built in this manner. At the ends of bi-directional lines, buses will need to find a loop, roundabout or dead-end road to allow them to reverse their direction.</p>
+                
+                <p>Bus stops are free to place; however, the maintenance cost of the bus system will be related to the number of buses in operation. The number of buses per line is primarily based on the line's length and can be modified to a limited extent by increasing or decreasing the bus system's budget. In the unmodded game, each bus has a capacity of 30 citizens.</p>
+                <br><br>
+                <btn id="lastpgBtn" onclick="change(-1)"><a>&#8249;</a></btn>
+                <btn id="nextpgBtn" onclick="change(+1)"><a>&#8250;</a></btn>
+            </div>
+            <div class="page">
+                <h1>Metro</h1>
+                <br>
+                <div class="left"><img alt="Underground Metro Station.png" src="img/75px-Underground_Metro_Station.png" width="75" height="69"></div>
+                <p>Underground Metro stations are advantageous for heavily populated areas because, unlike train tracks, they can be connected by underground tunnels and therefore take up very little room on the surface. Metro also avoid intersections, so there will never be any traffic congestion and metro will be extremely efficient.</p>
+                <p>Underground Metro stations are much cheaper to place (₡15000) and maintain (₡240/week) than train stations, although the metro track itself is slightly more expensive. Metro Stations can also be placed on ground level or above, with the expense of taking up space on the surface and producing noise pollution. After placing metro stations and connecting them with tracks, metro lines must be placed between stations by using the Metro Line Tool and clicking the stations in the desired order. Like other forms of public transportation, metro lines must form a closed loop, but metro lines, like train lines, tram lines, and monorail lines, can reverse their direction at a station. It is also possible to create multiple lines between different sets of stations. In the unmodded game, each metro train has a capacity of 180 citizens, and are colored green and white when visible above the surface.</p>
+                <div class="right"><img alt="Overground Metro Station" src="img/c431aqxti8521.png" width=250></div>
+                <p>Metro stations can accommodate two trains at the same time if they are travelling in opposite directions. The direction is determined by the station order on a line. Connecting multiple metro loops through a common station with trains travelling in opposite directions can be an effective way to interchange passengers. Conversely, overlapping lines travelling in the same direction can cause metro congestion. Some metro stations are available on the Steam Workshop that consist of two or more sets of platforms, enabling the ability for a metro station to serve more than two trains at a time and eliminating metro congestion. Those stations may require Steam Workshop modifications in order to work properly.</p>
+                <br><br>
+                <btn id="lastpgBtn" onclick="change(-1)"><a>&#8249;</a></btn>
+                <btn id="nextpgBtn" onclick="change(+1)"><a>&#8250;</a></btn>
+            </div>
+            <div class="page">
+                <h1>Train</h1>
+                <br>
+                <div class="left">
+                    <img alt="Train Station" src="img/trainstation.jpg" width="180px">
+                </div>
+                <p>Passenger trains will move tourists and citizens in and out of the city. When a passenger terminal is connected to the outside connections, trains will start automatically spawning. Train stations are more expensive to place (₡45,000) and maintain (₡960/week) than metro stations, although the track itself is slightly less expensive than metro track when it is placed at ground level; elevated and underground railway track is considerably more expensive to place.</p>
+                <div class="right"><img alt="train" src="img/train.jfif" width="200px"></div>
+                <p>Passenger trains can also be used to move people between train stations within the city. To do that, you need to create train lines in the same manner as bus, metro, or tram lines. This is done by placing stations, connecting them with tracks and then clicking on the "Line" icon in the train transportation menu. As with other transport lines, you must start at one station, connect other stations along the desired route and then repeat the process until you arrive back at the first stop where you will get a "complete line" message. It is best to segregate lines used within your city from intercity lines.</p>
+                
+                <br><br>
+                <btn id="lastpgBtn" onclick="change(-1)"><a>&#8249;</a></btn>
+                <btn id="nextpgBtn" onclick="change(+1)"><a>&#8250;</a></btn>
+            </div>
+            <div class="page">
+                <h1>Mono Rail</h1>
+                <br>
+                <div class="left">
+                    <img alt="MonoStation" src="img/Monorail_station.png" width="75">
+                </div>
+                <p>Monorails are a fast way of transporting people in dense areas. They create a lot of noise pollution, so they should generally stay out of residential areas. Each monorail has a capacity of 180 passengers. For the monorail, you need to build specially designed stations and connect them to each other via monorail tracks. There are also some transport hubs which monorails can be connected to.</p>
+                <p>Monorails can be built on top of roads. A new avenue type has been added with monorail tracks going on top of the section between lanes. This avenue is just like a regular road so that you can easily upgrade existing roads to use it. While the monorail has stand-alone stations that work just like stations for any other transport type, you can also place it on top of a road. The tracks also work without a road, so you can connect sections of stand-alone track and sections of track on top of an avenue. Like with the updated train tracks, both one- and two-way monorail tracks are available.</p>
+                <br><br>
+                <btn id="lastpgBtn" onclick="change(-1)"><a>&#8249;</a></btn>
+                <btn id="nextpgBtn" onclick="change(+1)"><a>&#8250;</a></btn>
+            </div>
+            <div class="page">
+                <h1>Airports</h1>
+                <br>
+                <div class="left">
+                    <img alt="Airport" src="img/Airport.png" width="75">
+                </div>
+                <p>There are several types of airports. The first type is the airport that comes with the base game. It becomes available at the "Metropolis" milestone. It has 3 gates (4 jetways) and a single runway. Its terminal is blue and has a curved shape roof-line on a simple rectangular building, seemingly based around Washington DC's international airport, Dulles. The second type is the "International Airport", which is included with the After Dark DLC and the third type is the "Cargo Airport", which comes with the Industries DLC, all of which are discussed below. There is also a Metropolitan Airport included in the Sunset Harbor DLC.</p>
+                <p>When you create an airport, airplanes will automatically path to it; the player does not need to create any routes. However, the map needs to have some pre-existing airplane paths that the airport will connect to. Airports can be difficult to place, because they need very flat land to be placed. Even slight slopes prevent placement, or can cause it to look quite bad. The international airport is even larger, increasing the difficulty of placement.</p>
+                <br><br>
+                <btn id="lastpgBtn" onclick="change(-1)"><a>&#8249;</a></btn>
+            </div>
         </div>
-        </div>
+        
+        
+        </div>       
+        </body>
+
+        </html>
