@@ -2,6 +2,11 @@
     box-sizing: border-box;
     margin: 0;
 }
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
 /*set font*/
 @font-face {
   font-family: headerfont;

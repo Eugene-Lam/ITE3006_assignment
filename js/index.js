@@ -15,7 +15,7 @@ function print_result() {
 	} else if (age > 121 || -1 > age) {
 		alert("Age must be 0 to 120")
 	} else if (!(check_name_str.test(name)) || check_name_num.test(name) ){
-		alert("Letters only");
+		alert("English letter only");
 	} else if (!(check_email.test(email))) {
 		alert("Please input valid email address");
 	} else if (!(check_tel.test(tel)) || tel.toString().length != 8) {
