@@ -1,9 +1,32 @@
 function print_result() {
-		alert("Name : " + document.f1.name.value +
-			"\nAge : " + document.f1.age.value +
-			"\nE-mail : " + document.f1.mail.value +
-			"\nPhone Number :" + document.f1.tel.value +
-			"\nComment : " + document.f1.comments.value);
+	var name = document.forms["f1"]["name"].value;
+	var age = document.forms["f1"]["age"].value;
+	var email = document.forms["f1"]["mail"].value;
+	var tel = document.forms["f1"]["tel"].value;
+	var comment = document.forms["f1"]["comments"].value;
+
+	var check_name_str = /[a-z]|[A-Z]/;
+	var check_name_num = /[1234567890]/;
+	var check_email = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+	var check_tel = /^[2]|^[3]|^[5]|^[6]|^[7]|^[9]/;
+
+	if (name == "" || age == "" || email == "" || tel == "" || comment == "") {
+		alert("Please fill out all field");
+	} else if (age > 121 || -1 > age) {
+		alert("Age must be 0 to 120")
+	} else if (!(check_name_str.test(name)) || check_name_num.test(name) ){
+		alert("Letters only");
+	} else if (!(check_email.test(email))) {
+		alert("Please input valid email address");
+	} else if (!(check_tel.test(tel)) || tel.toString().length != 8) {
+		alert("Please input valid phone number");
+	} else {
+		alert("Name : " + name +
+			"\nAge : " + age +
+			"\nE-mail : " + email +
+			"\nPhone Number : " + tel +
+			"\nComment : " + comment);
+	}
 }
 
 //when website loaded start this function
