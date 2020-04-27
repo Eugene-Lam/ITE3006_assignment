@@ -1,14 +1,9 @@
 function print_result() {
-	let phnum = document.getElementsByClassName('tel')
-	if (phnum.length != 8) {
-		alert('Phone Number is invalid');
-	} else {
 		alert("Name : " + document.f1.name.value +
 			"\nAge : " + document.f1.age.value +
 			"\nE-mail : " + document.f1.mail.value +
 			"\nPhone Number :" + document.f1.tel.value +
 			"\nComment : " + document.f1.comments.value);
-	}
 }
 
 //when website loaded start this function
