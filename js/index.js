@@ -40,7 +40,7 @@ window.onload = function () {
         //set bg
         document.body.style.backgroundImage = 'url("' + bgImg[i] + '")';
     }
-    //cool down 5000ms and loop change function
+    //wait 5000ms and start change function
     window.setInterval(changepg, 5000);
 };
 
@@ -62,7 +62,7 @@ function showDivs(n) {
 	if (n > x.length) {pg = 1}
 	//if n < 1 show last page
 	if (n < 1) {pg = x.length}
-	//display none all page
+	//hide all page
 	for (i = 0; i < x.length; i++) {
 		x[i].style.display = "none";
 	}
